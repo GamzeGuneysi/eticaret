@@ -1,0 +1,45 @@
+public function resim_ekle($id)
+	{
+		
+		$data["id"]=$id;
+		$this->load->view('admin/kategoriler_resim_ekle',$data);
+	}
+	public function resim_ekle_kaydet($id)
+	{
+		
+		$data["id"]=$id;
+		$config['upload_path']    ='./uploads/';
+		$config['allowed_types']    ='gif|jpg|png';
+		$config['max_size']          =1024 ;
+		$config['max_width']          = 1024;
+		$config ['max_height']        =1024;
+		$this->load->library('upload' ,$config);
+		if (!$this->upload->do_upload('resim'))
+		{
+			 $error = array ('error' => $this->upload->display_errors());
+			 print_r($error);
+			 $this->session->set_flashdata("mesaj","Resim istenilen kritere uygun değil");
+			   $this->load->view('admin/kategoriler_resim_ekle', $data);
+		}
+		else
+	 {
+			$upload_data=$this->upload->data();
+			$file_name=$upload_data['file_name'];
+	    {
+	    //Form verilerini alıcaz
+		$data=array(
+		 'resim'=> $file_name
+		
+		  );
+		 // print_r($data);
+		  //exit();
+		 $this->load->model('Database_Model');
+		 $this->Database_Model->update_data("kategoriler",$data,$id);
+		  $this->session->set_flashdata("mesaj","Resim Yüklendi ", $file_name);
+		redirect(base_url().'admin/kategoriler');
+	    }
+     }
+	
+	
+	
+	}

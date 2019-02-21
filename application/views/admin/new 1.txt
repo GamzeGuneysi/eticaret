@@ -1,0 +1,20 @@
+<div class="col-md-6">
+                                    <!-- Nav tabs --><div class="card">
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li role="presentation" class=""><a href="#home" aria-controls="home" role="tab" data-toggle="tab" aria-expanded="false">Genel</a></li>
+                                        <li role="presentation" class=""><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab" aria-expanded="false">Email</a></li>
+                                        <li role="presentation" class=""><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab" aria-expanded="false">Sosyal</a></li>
+										<li role="presentation" class=""><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab" aria-expanded="false">Hakkımızda</a></li>
+                                        <li role="presentation" class=""><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab" aria-expanded="false">İletişim</a></li>
+                                    </ul>
+
+                                    <!-- Tab panes -->
+                                    <div class="tab-content">
+                                        <div role="tabpanel" class="tab-pane" id="home">GENEL</div>
+                                        <div role="tabpanel" class="tab-pane" id="profile">email ayarları</div>
+                                        <div role="tabpanel" class="tab-pane" id="settings"></div>
+										 <div role="tabpanel" class="tab-pane" id="profile"></div>
+                                        <div role="tabpanel" class="tab-pane" id="settings"></div>
+                                    </div>
+</div>
+                                </div>

@@ -1,0 +1,15 @@
+	<ul>
+								<?php
+									if($this->session->userdata("uye_session"))
+									{?>	
+								<li><a href="<?=base_url()?>home/login_ol">Login</a></li>
+								<li class="dropdown <?=$uye?>">  <a href="#"></a>
+								<?=$this->session->uye_session["adsoy"]?>
+								
+								<li><a href="<?=base_url()?>home/kayit_ol">Kayıt Ol</a></li>
+							    <li><a href="<?=base_url()?>uye/hesabim">Hesabım</a></li>
+								<li><a href="<?=base_url()?>uye/mesajlar">Mesajlarım</a></li>
+								<li><a href="<?=base_url()?>uye/siparisler">Siparişlerim</a></li>
+								<li><a href="<?=base_url()?>uye/sepet_goster/musteri_id">Sepetim</a></li>
+								<li><a href="<?=base_url()?>uye/cikis">Çıkış</a></li>
+							</ul>
